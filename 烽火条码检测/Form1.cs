@@ -18,6 +18,10 @@ namespace 烽火条码检测
             InitializeComponent();
         }
 
+        //读取的打印设置
+        static string PrintChange = "";
+        static string PrintText = "";
+
         int checknum = 0;
         int sum = 0;
         private void timer1_Tick(object sender, EventArgs e)
@@ -68,6 +72,9 @@ namespace 烽火条码检测
         int SheZhi = 11111111;
         private void Form1_Load(object sender, EventArgs e)
         {
+            //FastReport环境变量设置（打印时不提示 "正在准备../正在打印..",一个程序只需设定一次，故一般写在程序入口）
+            (new FastReport.EnvironmentSettings()).ReportSettings.ShowProgress = false;
+
             try
             {
                 FileStream fs = new FileStream("load.ini", FileMode.Open);
@@ -83,6 +90,26 @@ namespace 烽火条码检测
             catch
             {
             }
+
+            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config.ini"))
+            {
+                MessageBox.Show(AppDomain.CurrentDomain.BaseDirectory + "Config.ini" + "文件不存在");
+                return;
+            }
+
+            //读取配置文件，选择打印方式
+            string[] lines = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "Config.ini", System.Text.Encoding.GetEncoding("GB2312"));
+
+            foreach (string line in lines)
+            {
+                if (line.Contains("PrintChange"))
+                {
+                    PrintChange = line.Substring(line.IndexOf("=") + 1).Trim();
+                }
+            }
+
+            simpleButton2.Visible = false;
+            simpleButton3.Visible = false;
         }
 
         //初始化复选框
@@ -467,6 +494,9 @@ namespace 烽火条码检测
         {
             pictureEdit1.Visible = false;
             pictureEdit2.Visible = false;
+            simpleButton2.Visible = false;
+            simpleButton3.Visible = false;
+            textEdit1.Enabled = true;
             textEdit1.Text = "";
             textEdit2.Text = "";
             textEdit3.Text = "";
@@ -558,6 +588,7 @@ namespace 烽火条码检测
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     checknum += 1;
+                    PrintText = ds.Tables[0].Rows[0][0].ToString().Trim();
                     textcheck(1);
                 }
                 else
@@ -683,6 +714,12 @@ namespace 烽火条码检测
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && (textEdit7.Text.Trim() == ds.Tables[0].Rows[0][1].ToString().Trim() || textEdit7.Text.Trim().Replace("-","") == ds.Tables[0].Rows[0][1].ToString().Trim()))
                 {
                     checknum += 1000000;
+
+                    if (PrintChange == "1")
+                    {
+                        GetParaDataPrint_YX02(1);
+                    }
+
                     textcheck(7);
                 }
                 else
@@ -755,7 +792,57 @@ namespace 烽火条码检测
         }
 
         #endregion
-        
 
+
+        //----以下是YX01数据采集----
+        private void GetParaDataPrint_YX02(int tt_itemtype)
+        {
+            //单板打印
+            if (PrintText != "")
+            {
+                FastReport.Report report = new FastReport.Report();
+
+                report.Prepare();
+                report.Load(Application.StartupPath + "\\LABLE\\YX_2.frx");
+                report.SetParameterValue("S01", PrintText);
+
+                report.PrintSettings.ShowDialog = false;
+
+                //--打印
+                if (tt_itemtype == 1)
+                {
+                    report.Print();
+                }
+
+                //--预览
+                if (tt_itemtype == 2)
+                {
+                    report.Design();
+                }
+            }
+
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            Form2 frmlogin = new Form2();
+            frmlogin.StartPosition = FormStartPosition.CenterParent;
+            if (frmlogin.ShowDialog() == DialogResult.OK)
+            {
+                simpleButton2.Visible = true;
+                simpleButton3.Visible = true;
+                textEdit1.Enabled = false;
+            }
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            GetParaDataPrint_YX02(2);
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            GetParaDataPrint_YX02(1);
+        }
     }
 }
