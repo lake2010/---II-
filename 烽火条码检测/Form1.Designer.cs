@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
-            this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
+            this.barHeaderItem4 = new DevExpress.XtraBars.BarHeaderItem();
             this.barHeaderItem2 = new DevExpress.XtraBars.BarHeaderItem();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -88,6 +88,12 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.checkEdit10 = new DevExpress.XtraEditors.CheckEdit();
+            this.textEdit11 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.barHeaderItem3 = new DevExpress.XtraBars.BarHeaderItem();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barHeaderItem1 = new DevExpress.XtraBars.BarHeaderItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -121,6 +127,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -136,11 +144,14 @@
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
             this.skinRibbonGalleryBarItem1,
-            this.barHeaderItem1,
-            this.barHeaderItem2});
-            this.ribbonControl1.Location = new System.Drawing.Point(0, 25);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl1.MaxItemId = 6;
+            this.barHeaderItem4,
+            this.barHeaderItem2,
+            this.barHeaderItem3,
+            this.barStaticItem1,
+            this.barHeaderItem1});
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 36);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.ribbonControl1.MaxItemId = 10;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowCategoryInCaption = false;
@@ -148,7 +159,7 @@
             this.ribbonControl1.ShowFullScreenButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
             this.ribbonControl1.ShowToolbarCustomizeItem = false;
-            this.ribbonControl1.Size = new System.Drawing.Size(896, 0);
+            this.ribbonControl1.Size = new System.Drawing.Size(1456, 0);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.Toolbar.ShowCustomizeItem = false;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -161,10 +172,10 @@
             this.skinRibbonGalleryBarItem1.Id = 2;
             this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
             // 
-            // barHeaderItem1
+            // barHeaderItem4
             // 
-            this.barHeaderItem1.Id = 3;
-            this.barHeaderItem1.Name = "barHeaderItem1";
+            this.barHeaderItem4.Id = 3;
+            this.barHeaderItem4.Name = "barHeaderItem4";
             // 
             // barHeaderItem2
             // 
@@ -173,14 +184,17 @@
             // 
             // ribbonStatusBar1
             // 
+            this.ribbonStatusBar1.AllowDrop = true;
+            this.ribbonStatusBar1.AutoHeight = true;
+            this.ribbonStatusBar1.Dock = System.Windows.Forms.DockStyle.None;
+            this.ribbonStatusBar1.ItemLinks.Add(this.barHeaderItem4);
             this.ribbonStatusBar1.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
             this.ribbonStatusBar1.ItemLinks.Add(this.barHeaderItem1);
-            this.ribbonStatusBar1.ItemLinks.Add(this.barHeaderItem2);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 654);
-            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 1154);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(896, 29);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1456, 41);
             // 
             // timer1
             // 
@@ -198,10 +212,10 @@
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.textEdit1);
             this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Location = new System.Drawing.Point(14, 39);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupControl1.Location = new System.Drawing.Point(82, 48);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(686, 170);
+            this.groupControl1.Size = new System.Drawing.Size(1115, 273);
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "彩盒条码";
             // 
@@ -209,12 +223,12 @@
             // 
             this.checkEdit2.EditValue = true;
             this.checkEdit2.Enabled = false;
-            this.checkEdit2.Location = new System.Drawing.Point(653, 127);
-            this.checkEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkEdit2.Location = new System.Drawing.Point(1061, 205);
+            this.checkEdit2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.checkEdit2.MenuManager = this.ribbonControl1;
             this.checkEdit2.Name = "checkEdit2";
             this.checkEdit2.Properties.Caption = "";
-            this.checkEdit2.Size = new System.Drawing.Size(23, 19);
+            this.checkEdit2.Size = new System.Drawing.Size(37, 19);
             this.checkEdit2.TabIndex = 7;
             this.checkEdit2.CheckedChanged += new System.EventHandler(this.checkEdit2_CheckedChanged);
             // 
@@ -222,24 +236,24 @@
             // 
             this.checkEdit1.EditValue = true;
             this.checkEdit1.Enabled = false;
-            this.checkEdit1.Location = new System.Drawing.Point(653, 85);
-            this.checkEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkEdit1.Location = new System.Drawing.Point(1061, 137);
+            this.checkEdit1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.checkEdit1.MenuManager = this.ribbonControl1;
             this.checkEdit1.Name = "checkEdit1";
             this.checkEdit1.Properties.Caption = "";
-            this.checkEdit1.Size = new System.Drawing.Size(23, 19);
+            this.checkEdit1.Size = new System.Drawing.Size(37, 19);
             this.checkEdit1.TabIndex = 6;
             this.checkEdit1.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
             // 
             // textEdit3
             // 
-            this.textEdit3.Location = new System.Drawing.Point(161, 121);
-            this.textEdit3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEdit3.Location = new System.Drawing.Point(262, 195);
+            this.textEdit3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.textEdit3.MenuManager = this.ribbonControl1;
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(481, 32);
+            this.textEdit3.Size = new System.Drawing.Size(782, 48);
             this.textEdit3.TabIndex = 5;
             this.textEdit3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit3_KeyDown);
             // 
@@ -248,22 +262,22 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl3.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl3.Location = new System.Drawing.Point(6, 125);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl3.Location = new System.Drawing.Point(10, 201);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(159, 27);
+            this.labelControl3.Size = new System.Drawing.Size(258, 44);
             this.labelControl3.TabIndex = 4;
             this.labelControl3.Text = "生产序列号：";
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(161, 77);
-            this.textEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEdit2.Location = new System.Drawing.Point(262, 124);
+            this.textEdit2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.textEdit2.MenuManager = this.ribbonControl1;
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(481, 32);
+            this.textEdit2.Size = new System.Drawing.Size(782, 48);
             this.textEdit2.TabIndex = 3;
             this.textEdit2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit2_KeyDown);
             // 
@@ -272,22 +286,22 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(33, 81);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl2.Location = new System.Drawing.Point(54, 131);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(131, 27);
+            this.labelControl2.Size = new System.Drawing.Size(213, 44);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "GPON SN：";
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(161, 33);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEdit1.Location = new System.Drawing.Point(262, 53);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.textEdit1.MenuManager = this.ribbonControl1;
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(481, 32);
+            this.textEdit1.Size = new System.Drawing.Size(782, 48);
             this.textEdit1.TabIndex = 1;
             this.textEdit1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit1_KeyDown);
             // 
@@ -296,10 +310,10 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl1.Location = new System.Drawing.Point(33, 37);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl1.Location = new System.Drawing.Point(54, 60);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(131, 27);
+            this.labelControl1.Size = new System.Drawing.Size(213, 44);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "设备标示：";
             // 
@@ -317,10 +331,10 @@
             this.groupControl2.Controls.Add(this.labelControl5);
             this.groupControl2.Controls.Add(this.labelControl4);
             this.groupControl2.Controls.Add(this.textEdit4);
-            this.groupControl2.Location = new System.Drawing.Point(14, 216);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupControl2.Location = new System.Drawing.Point(82, 333);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(686, 212);
+            this.groupControl2.Size = new System.Drawing.Size(1115, 342);
             this.groupControl2.TabIndex = 3;
             this.groupControl2.Text = "主机条码";
             // 
@@ -328,24 +342,24 @@
             // 
             this.checkEdit6.EditValue = true;
             this.checkEdit6.Enabled = false;
-            this.checkEdit6.Location = new System.Drawing.Point(653, 171);
-            this.checkEdit6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkEdit6.Location = new System.Drawing.Point(1061, 276);
+            this.checkEdit6.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.checkEdit6.MenuManager = this.ribbonControl1;
             this.checkEdit6.Name = "checkEdit6";
             this.checkEdit6.Properties.Caption = "";
-            this.checkEdit6.Size = new System.Drawing.Size(23, 19);
+            this.checkEdit6.Size = new System.Drawing.Size(37, 19);
             this.checkEdit6.TabIndex = 13;
             this.checkEdit6.CheckedChanged += new System.EventHandler(this.checkEdit6_CheckedChanged);
             // 
             // textEdit7
             // 
-            this.textEdit7.Location = new System.Drawing.Point(161, 163);
-            this.textEdit7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEdit7.Location = new System.Drawing.Point(262, 263);
+            this.textEdit7.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.textEdit7.MenuManager = this.ribbonControl1;
             this.textEdit7.Name = "textEdit7";
             this.textEdit7.Properties.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit7.Properties.Appearance.Options.UseFont = true;
-            this.textEdit7.Size = new System.Drawing.Size(481, 32);
+            this.textEdit7.Size = new System.Drawing.Size(782, 48);
             this.textEdit7.TabIndex = 12;
             this.textEdit7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit7_KeyDown);
             // 
@@ -354,10 +368,10 @@
             this.labelControl7.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl7.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl7.Location = new System.Drawing.Point(33, 167);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl7.Location = new System.Drawing.Point(54, 269);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(131, 27);
+            this.labelControl7.Size = new System.Drawing.Size(213, 44);
             this.labelControl7.TabIndex = 11;
             this.labelControl7.Text = "MAC：";
             // 
@@ -365,12 +379,12 @@
             // 
             this.checkEdit5.EditValue = true;
             this.checkEdit5.Enabled = false;
-            this.checkEdit5.Location = new System.Drawing.Point(653, 127);
-            this.checkEdit5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkEdit5.Location = new System.Drawing.Point(1061, 205);
+            this.checkEdit5.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.checkEdit5.MenuManager = this.ribbonControl1;
             this.checkEdit5.Name = "checkEdit5";
             this.checkEdit5.Properties.Caption = "";
-            this.checkEdit5.Size = new System.Drawing.Size(23, 19);
+            this.checkEdit5.Size = new System.Drawing.Size(37, 19);
             this.checkEdit5.TabIndex = 10;
             this.checkEdit5.CheckedChanged += new System.EventHandler(this.checkEdit5_CheckedChanged);
             // 
@@ -378,24 +392,24 @@
             // 
             this.checkEdit4.EditValue = true;
             this.checkEdit4.Enabled = false;
-            this.checkEdit4.Location = new System.Drawing.Point(653, 82);
-            this.checkEdit4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkEdit4.Location = new System.Drawing.Point(1061, 132);
+            this.checkEdit4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.checkEdit4.MenuManager = this.ribbonControl1;
             this.checkEdit4.Name = "checkEdit4";
             this.checkEdit4.Properties.Caption = "";
-            this.checkEdit4.Size = new System.Drawing.Size(23, 19);
+            this.checkEdit4.Size = new System.Drawing.Size(37, 19);
             this.checkEdit4.TabIndex = 10;
             this.checkEdit4.CheckedChanged += new System.EventHandler(this.checkEdit4_CheckedChanged);
             // 
             // textEdit6
             // 
-            this.textEdit6.Location = new System.Drawing.Point(161, 120);
-            this.textEdit6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEdit6.Location = new System.Drawing.Point(262, 193);
+            this.textEdit6.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.textEdit6.MenuManager = this.ribbonControl1;
             this.textEdit6.Name = "textEdit6";
             this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit6.Properties.Appearance.Options.UseFont = true;
-            this.textEdit6.Size = new System.Drawing.Size(481, 32);
+            this.textEdit6.Size = new System.Drawing.Size(782, 48);
             this.textEdit6.TabIndex = 9;
             this.textEdit6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit6_KeyDown);
             // 
@@ -404,10 +418,10 @@
             this.labelControl6.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl6.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl6.Location = new System.Drawing.Point(33, 123);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl6.Location = new System.Drawing.Point(54, 198);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(131, 27);
+            this.labelControl6.Size = new System.Drawing.Size(213, 44);
             this.labelControl6.TabIndex = 8;
             this.labelControl6.Text = "GPON SN：";
             // 
@@ -415,24 +429,24 @@
             // 
             this.checkEdit3.EditValue = true;
             this.checkEdit3.Enabled = false;
-            this.checkEdit3.Location = new System.Drawing.Point(653, 40);
-            this.checkEdit3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkEdit3.Location = new System.Drawing.Point(1061, 64);
+            this.checkEdit3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.checkEdit3.MenuManager = this.ribbonControl1;
             this.checkEdit3.Name = "checkEdit3";
             this.checkEdit3.Properties.Caption = "";
-            this.checkEdit3.Size = new System.Drawing.Size(23, 19);
+            this.checkEdit3.Size = new System.Drawing.Size(37, 19);
             this.checkEdit3.TabIndex = 8;
             this.checkEdit3.CheckedChanged += new System.EventHandler(this.checkEdit3_CheckedChanged);
             // 
             // textEdit5
             // 
-            this.textEdit5.Location = new System.Drawing.Point(161, 76);
-            this.textEdit5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEdit5.Location = new System.Drawing.Point(262, 122);
+            this.textEdit5.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.textEdit5.MenuManager = this.ribbonControl1;
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit5.Properties.Appearance.Options.UseFont = true;
-            this.textEdit5.Size = new System.Drawing.Size(481, 32);
+            this.textEdit5.Size = new System.Drawing.Size(782, 48);
             this.textEdit5.TabIndex = 9;
             this.textEdit5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit5_KeyDown);
             // 
@@ -441,10 +455,10 @@
             this.labelControl5.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl5.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl5.Location = new System.Drawing.Point(6, 80);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl5.Location = new System.Drawing.Point(10, 129);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(159, 27);
+            this.labelControl5.Size = new System.Drawing.Size(258, 44);
             this.labelControl5.TabIndex = 8;
             this.labelControl5.Text = "定制二维码：";
             // 
@@ -453,27 +467,30 @@
             this.labelControl4.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl4.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl4.Location = new System.Drawing.Point(33, 35);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl4.Location = new System.Drawing.Point(54, 56);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(131, 27);
+            this.labelControl4.Size = new System.Drawing.Size(213, 44);
             this.labelControl4.TabIndex = 8;
             this.labelControl4.Text = "设备标示：";
             // 
             // textEdit4
             // 
-            this.textEdit4.Location = new System.Drawing.Point(161, 32);
-            this.textEdit4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEdit4.Location = new System.Drawing.Point(262, 52);
+            this.textEdit4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.textEdit4.MenuManager = this.ribbonControl1;
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Size = new System.Drawing.Size(481, 32);
+            this.textEdit4.Size = new System.Drawing.Size(782, 48);
             this.textEdit4.TabIndex = 9;
             this.textEdit4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit4_KeyDown);
             // 
             // groupControl3
             // 
+            this.groupControl3.Controls.Add(this.checkEdit10);
+            this.groupControl3.Controls.Add(this.textEdit11);
+            this.groupControl3.Controls.Add(this.labelControl12);
             this.groupControl3.Controls.Add(this.labelControl11);
             this.groupControl3.Controls.Add(this.checkEdit9);
             this.groupControl3.Controls.Add(this.textEdit10);
@@ -483,10 +500,10 @@
             this.groupControl3.Controls.Add(this.checkEdit7);
             this.groupControl3.Controls.Add(this.textEdit8);
             this.groupControl3.Controls.Add(this.labelControl8);
-            this.groupControl3.Location = new System.Drawing.Point(14, 436);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupControl3.Location = new System.Drawing.Point(82, 687);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(686, 208);
+            this.groupControl3.Size = new System.Drawing.Size(1115, 403);
             this.groupControl3.TabIndex = 4;
             this.groupControl3.Text = "其它条码";
             // 
@@ -495,10 +512,10 @@
             this.labelControl11.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl11.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl11.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl11.Location = new System.Drawing.Point(-1, 123);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl11.Location = new System.Drawing.Point(-2, 198);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(350, 27);
+            this.labelControl11.Size = new System.Drawing.Size(569, 44);
             this.labelControl11.TabIndex = 22;
             this.labelControl11.Text = "产品二维码/资产管理编码：";
             // 
@@ -506,24 +523,24 @@
             // 
             this.checkEdit9.EditValue = true;
             this.checkEdit9.Enabled = false;
-            this.checkEdit9.Location = new System.Drawing.Point(653, 165);
-            this.checkEdit9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkEdit9.Location = new System.Drawing.Point(1061, 266);
+            this.checkEdit9.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.checkEdit9.MenuManager = this.ribbonControl1;
             this.checkEdit9.Name = "checkEdit9";
             this.checkEdit9.Properties.Caption = "";
-            this.checkEdit9.Size = new System.Drawing.Size(23, 19);
+            this.checkEdit9.Size = new System.Drawing.Size(37, 19);
             this.checkEdit9.TabIndex = 21;
             this.checkEdit9.CheckedChanged += new System.EventHandler(this.checkEdit9_CheckedChanged);
             // 
             // textEdit10
             // 
-            this.textEdit10.Location = new System.Drawing.Point(161, 158);
-            this.textEdit10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEdit10.Location = new System.Drawing.Point(262, 255);
+            this.textEdit10.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.textEdit10.MenuManager = this.ribbonControl1;
             this.textEdit10.Name = "textEdit10";
             this.textEdit10.Properties.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit10.Properties.Appearance.Options.UseFont = true;
-            this.textEdit10.Size = new System.Drawing.Size(481, 32);
+            this.textEdit10.Size = new System.Drawing.Size(782, 48);
             this.textEdit10.TabIndex = 20;
             this.textEdit10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit10_KeyDown);
             // 
@@ -531,24 +548,24 @@
             // 
             this.checkEdit8.EditValue = true;
             this.checkEdit8.Enabled = false;
-            this.checkEdit8.Location = new System.Drawing.Point(653, 86);
-            this.checkEdit8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkEdit8.Location = new System.Drawing.Point(1061, 139);
+            this.checkEdit8.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.checkEdit8.MenuManager = this.ribbonControl1;
             this.checkEdit8.Name = "checkEdit8";
             this.checkEdit8.Properties.Caption = "";
-            this.checkEdit8.Size = new System.Drawing.Size(23, 19);
+            this.checkEdit8.Size = new System.Drawing.Size(37, 19);
             this.checkEdit8.TabIndex = 19;
             this.checkEdit8.CheckedChanged += new System.EventHandler(this.checkEdit8_CheckedChanged);
             // 
             // textEdit9
             // 
-            this.textEdit9.Location = new System.Drawing.Point(161, 80);
-            this.textEdit9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEdit9.Location = new System.Drawing.Point(262, 129);
+            this.textEdit9.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.textEdit9.MenuManager = this.ribbonControl1;
             this.textEdit9.Name = "textEdit9";
             this.textEdit9.Properties.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit9.Properties.Appearance.Options.UseFont = true;
-            this.textEdit9.Size = new System.Drawing.Size(481, 32);
+            this.textEdit9.Size = new System.Drawing.Size(782, 48);
             this.textEdit9.TabIndex = 18;
             this.textEdit9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit9_KeyDown);
             // 
@@ -557,10 +574,10 @@
             this.labelControl10.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl10.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl10.Location = new System.Drawing.Point(6, 84);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl10.Location = new System.Drawing.Point(10, 135);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(159, 27);
+            this.labelControl10.Size = new System.Drawing.Size(258, 44);
             this.labelControl10.TabIndex = 17;
             this.labelControl10.Text = "电源SN：";
             // 
@@ -568,24 +585,24 @@
             // 
             this.checkEdit7.EditValue = true;
             this.checkEdit7.Enabled = false;
-            this.checkEdit7.Location = new System.Drawing.Point(653, 42);
-            this.checkEdit7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkEdit7.Location = new System.Drawing.Point(1061, 68);
+            this.checkEdit7.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.checkEdit7.MenuManager = this.ribbonControl1;
             this.checkEdit7.Name = "checkEdit7";
             this.checkEdit7.Properties.Caption = "";
-            this.checkEdit7.Size = new System.Drawing.Size(23, 19);
+            this.checkEdit7.Size = new System.Drawing.Size(37, 19);
             this.checkEdit7.TabIndex = 16;
             this.checkEdit7.CheckedChanged += new System.EventHandler(this.checkEdit7_CheckedChanged);
             // 
             // textEdit8
             // 
-            this.textEdit8.Location = new System.Drawing.Point(161, 36);
-            this.textEdit8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEdit8.Location = new System.Drawing.Point(262, 58);
+            this.textEdit8.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.textEdit8.MenuManager = this.ribbonControl1;
             this.textEdit8.Name = "textEdit8";
             this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit8.Properties.Appearance.Options.UseFont = true;
-            this.textEdit8.Size = new System.Drawing.Size(481, 32);
+            this.textEdit8.Size = new System.Drawing.Size(782, 48);
             this.textEdit8.TabIndex = 15;
             this.textEdit8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit8_KeyDown);
             // 
@@ -594,10 +611,10 @@
             this.labelControl8.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl8.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl8.Location = new System.Drawing.Point(-8, 41);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl8.Location = new System.Drawing.Point(-13, 66);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(173, 27);
+            this.labelControl8.Size = new System.Drawing.Size(281, 44);
             this.labelControl8.TabIndex = 14;
             this.labelControl8.Text = "II型标签：";
             // 
@@ -685,49 +702,49 @@
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(896, 25);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.barDockControlTop.Size = new System.Drawing.Size(1456, 36);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 683);
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(896, 0);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 1198);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1456, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 25);
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 658);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 36);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 1162);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(896, 25);
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 658);
+            this.barDockControlRight.Location = new System.Drawing.Point(1456, 36);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 1162);
             // 
             // groupControl4
             // 
             this.groupControl4.Controls.Add(this.pictureEdit2);
             this.groupControl4.Controls.Add(this.pictureEdit1);
-            this.groupControl4.Location = new System.Drawing.Point(741, 44);
-            this.groupControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupControl4.Location = new System.Drawing.Point(1207, 55);
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(128, 165);
+            this.groupControl4.Size = new System.Drawing.Size(208, 266);
             this.groupControl4.TabIndex = 17;
             this.groupControl4.Text = "单行校验";
             // 
             // pictureEdit2
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
-            this.pictureEdit2.Location = new System.Drawing.Point(13, 39);
-            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureEdit2.Location = new System.Drawing.Point(21, 63);
+            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.pictureEdit2.MenuManager = this.ribbonControl1;
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.AllowFocused = false;
@@ -735,15 +752,15 @@
             this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit2.Size = new System.Drawing.Size(103, 116);
+            this.pictureEdit2.Size = new System.Drawing.Size(167, 187);
             this.pictureEdit2.TabIndex = 14;
             this.pictureEdit2.Visible = false;
             // 
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(13, 39);
-            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureEdit1.Location = new System.Drawing.Point(21, 63);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.pictureEdit1.MenuManager = this.ribbonControl1;
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.AllowFocused = false;
@@ -751,7 +768,7 @@
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(103, 116);
+            this.pictureEdit1.Size = new System.Drawing.Size(167, 187);
             this.pictureEdit1.TabIndex = 13;
             this.pictureEdit1.Visible = false;
             // 
@@ -760,10 +777,10 @@
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(747, 391);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton1.Location = new System.Drawing.Point(1217, 614);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(114, 53);
+            this.simpleButton1.Size = new System.Drawing.Size(185, 85);
             this.simpleButton1.TabIndex = 18;
             this.simpleButton1.Text = "清除";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -771,10 +788,10 @@
             // groupControl5
             // 
             this.groupControl5.Controls.Add(this.labelControl9);
-            this.groupControl5.Location = new System.Drawing.Point(741, 228);
-            this.groupControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupControl5.Location = new System.Drawing.Point(1207, 351);
+            this.groupControl5.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(128, 123);
+            this.groupControl5.Size = new System.Drawing.Size(208, 198);
             this.groupControl5.TabIndex = 18;
             this.groupControl5.Text = "校验结果";
             // 
@@ -783,20 +800,20 @@
             this.labelControl9.Appearance.Font = new System.Drawing.Font("宋体", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Green;
             this.labelControl9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl9.Location = new System.Drawing.Point(7, 32);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl9.Location = new System.Drawing.Point(11, 52);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(117, 85);
+            this.labelControl9.Size = new System.Drawing.Size(190, 137);
             this.labelControl9.TabIndex = 8;
             // 
             // simpleButton2
             // 
             this.simpleButton2.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Location = new System.Drawing.Point(748, 512);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton2.Location = new System.Drawing.Point(1219, 809);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(114, 53);
+            this.simpleButton2.Size = new System.Drawing.Size(185, 85);
             this.simpleButton2.TabIndex = 25;
             this.simpleButton2.Text = "预览";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -805,10 +822,10 @@
             // 
             this.simpleButton3.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton3.Appearance.Options.UseFont = true;
-            this.simpleButton3.Location = new System.Drawing.Point(748, 573);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton3.Location = new System.Drawing.Point(1219, 906);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(114, 53);
+            this.simpleButton3.Size = new System.Drawing.Size(185, 85);
             this.simpleButton3.TabIndex = 26;
             this.simpleButton3.Text = "打印";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
@@ -817,19 +834,76 @@
             // 
             this.simpleButton4.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton4.Appearance.Options.UseFont = true;
-            this.simpleButton4.Location = new System.Drawing.Point(747, 451);
-            this.simpleButton4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.simpleButton4.Location = new System.Drawing.Point(1217, 711);
+            this.simpleButton4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(114, 53);
+            this.simpleButton4.Size = new System.Drawing.Size(185, 85);
             this.simpleButton4.TabIndex = 27;
             this.simpleButton4.Text = "模板调整";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
+            // checkEdit10
+            // 
+            this.checkEdit10.EditValue = true;
+            this.checkEdit10.Enabled = false;
+            this.checkEdit10.Location = new System.Drawing.Point(1061, 339);
+            this.checkEdit10.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.checkEdit10.MenuManager = this.ribbonControl1;
+            this.checkEdit10.Name = "checkEdit10";
+            this.checkEdit10.Properties.Caption = "";
+            this.checkEdit10.Size = new System.Drawing.Size(37, 19);
+            this.checkEdit10.TabIndex = 25;
+            this.checkEdit10.CheckedChanged += new System.EventHandler(this.checkEdit10_CheckedChanged);
+            // 
+            // textEdit11
+            // 
+            this.textEdit11.Location = new System.Drawing.Point(262, 329);
+            this.textEdit11.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.textEdit11.MenuManager = this.ribbonControl1;
+            this.textEdit11.Name = "textEdit11";
+            this.textEdit11.Properties.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit11.Properties.Appearance.Options.UseFont = true;
+            this.textEdit11.Size = new System.Drawing.Size(782, 48);
+            this.textEdit11.TabIndex = 24;
+            this.textEdit11.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textEdit11_KeyDown);
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelControl12.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl12.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl12.Location = new System.Drawing.Point(10, 331);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(258, 44);
+            this.labelControl12.TabIndex = 23;
+            this.labelControl12.Text = "温馨提示码：";
+            // 
+            // barHeaderItem3
+            // 
+            this.barHeaderItem3.Caption = "barHeaderItem3";
+            this.barHeaderItem3.Id = 7;
+            this.barHeaderItem3.Name = "barHeaderItem3";
+            // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Caption = "barStaticItem1";
+            this.barStaticItem1.Id = 8;
+            this.barStaticItem1.Name = "barStaticItem1";
+            this.barStaticItem1.TextAlignment = System.Drawing.StringAlignment.Near;
+            // 
+            // barHeaderItem1
+            // 
+            this.barHeaderItem1.Id = 9;
+            this.barHeaderItem1.Name = "barHeaderItem1";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 683);
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1456, 1198);
             this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
@@ -846,8 +920,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximizeBox = false;
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "烽火条码检测";
@@ -885,6 +958,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.checkEdit10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -895,7 +970,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
-        private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
+        private DevExpress.XtraBars.BarHeaderItem barHeaderItem4;
         private DevExpress.XtraBars.BarHeaderItem barHeaderItem2;
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
@@ -950,6 +1025,12 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.CheckEdit checkEdit10;
+        private DevExpress.XtraEditors.TextEdit textEdit11;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraBars.BarHeaderItem barHeaderItem3;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.BarHeaderItem barHeaderItem1;
     }
 }
 

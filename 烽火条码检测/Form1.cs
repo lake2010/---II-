@@ -22,12 +22,15 @@ namespace 烽火条码检测
         static string PrintChange = "";
         static string PrintText = "";
 
+        //额外添加的二维码检测
+        public bool textEdit11check = false;
+
         int checknum = 0;
         int sum = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            barHeaderItem1.Caption = "时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            barHeaderItem2.Caption = "校验数量：" + sum.ToString();
+            barHeaderItem4.Caption = "时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            barHeaderItem1.Caption = "校验数量：" + sum.ToString();
         }
 
         public bool qx = false;
@@ -55,6 +58,7 @@ namespace 烽火条码检测
                         checkEdit7.Enabled = true;
                         checkEdit8.Enabled = true;
                         checkEdit9.Enabled = true;
+                        checkEdit10.Enabled = true;
                     }
                 }
                 else
@@ -232,6 +236,7 @@ namespace 烽火条码检测
             checkEdit7.Enabled = false;
             checkEdit8.Enabled = false;
             checkEdit9.Enabled = false;
+            checkEdit10.Enabled = false;
             if (qx)
             {
                 int i=0;
@@ -373,6 +378,18 @@ namespace 烽火条码检测
             }
         }
 
+        private void checkEdit10_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkEdit10.Checked)
+            {
+                textEdit11.Enabled = true;
+            }
+            else
+            {
+                textEdit11.Enabled = false;
+            }
+        }
+
         #endregion
 
 
@@ -482,6 +499,17 @@ namespace 烽火条码检测
                         textcheck(10);
                     }
                     break;
+                case 10:
+                    if (textEdit11.Enabled != false)
+                    {
+                        textEdit11.Text = "";
+                        textEdit11.Focus();
+                    }
+                    else
+                    {
+                        textcheck(11);
+                    }
+                    break;
                 default:
                         sum++;
                         check();
@@ -507,6 +535,7 @@ namespace 烽火条码检测
             textEdit8.Text = "";
             textEdit9.Text = "";
             textEdit10.Text = "";
+            textEdit11.Text = "";
             checknum = 0;
             textEdit1.Focus();
         }
@@ -524,9 +553,15 @@ namespace 烽火条码检测
             if (textEdit8.Enabled == true) x = x + 10000000;
             if (textEdit9.Enabled == true) x = x + 100000000;
             if (textEdit10.Enabled == true) x = x + 1000000000;
-            if (checknum % 1000000000 >= x % 1000000000 && checknum % 100000000 >= x % 100000000 && checknum % 10000000 >= x % 10000000 && checknum % 1000000 >= x % 1000000 
+
+            if (textEdit11.Enabled == false)
+            {
+                textEdit11check = true;
+            }
+
+                if (checknum % 1000000000 >= x % 1000000000 && checknum % 100000000 >= x % 100000000 && checknum % 10000000 >= x % 10000000 && checknum % 1000000 >= x % 1000000 
                 && checknum % 100000 >= x % 100000 && checknum % 10000 >= x % 10000
-            && checknum % 1000 >= x % 1000 && checknum % 100 >= x % 100 && checknum % 10 >= x % 10 && checknum >= x)
+            && checknum % 1000 >= x % 1000 && checknum % 100 >= x % 100 && checknum % 10 >= x % 10 && checknum >= x && textEdit11check)
             {
                 labelControl9.Text = "通过";
                 labelControl9.ForeColor = Color.Green;
@@ -779,7 +814,7 @@ namespace 烽火条码检测
                 string p1 = ds.Tables[0].Rows[0][2].ToString().Trim();
                 string p2 = ds.Tables[0].Rows[0][6].ToString().Trim();
                 string p3 = ds.Tables[0].Rows[0][1].ToString().Trim();
-                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && (((textEdit10.Text.Trim().Contains(p1)) && (textEdit10.Text.Trim().Contains(p2))) || textEdit10.Text.Trim() == ds.Tables[0].Rows[0][5].ToString().Trim() || textEdit10.Text.Trim().Contains(p3)))
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && (((textEdit10.Text.Trim().Contains(p1)) && (textEdit10.Text.Trim().Contains(p2))) || textEdit10.Text.Trim() == ds.Tables[0].Rows[0][5].ToString().Trim()))
                 {
                     checknum += 1000000000;
                     textcheck(10);
@@ -790,6 +825,26 @@ namespace 烽火条码检测
                     pictureEdit2.Visible = true;
                     textEdit10.Text = "";
                     textEdit10.Focus();
+                }
+            }
+        }
+
+        private void textEdit11_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && textEdit10.Text.Trim().Length > 0)
+            {
+                string w = ds.Tables[0].Rows[0][1].ToString().Trim();
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && textEdit11.Text.Trim().Contains(w) && textEdit11.Text.Trim().Contains("sn") == false)
+                {
+                    textEdit11check = true;
+                    textcheck(11);
+                }
+                else
+                {
+                    pictureEdit1.Visible = false;
+                    pictureEdit2.Visible = true;
+                    textEdit11.Text = "";
+                    textEdit11.Focus();
                 }
             }
         }
