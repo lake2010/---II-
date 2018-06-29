@@ -673,7 +673,9 @@ namespace 烽火条码检测
         {
             if (e.KeyCode == Keys.Enter && textEdit5.Text.Trim().Length > 0)
             {
-                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && textEdit5.Text.Trim().Contains(ds.Tables[0].Rows[0][7].ToString().Trim()))
+                string s1 = ds.Tables[0].Rows[0][7].ToString().Trim();
+                string s2 = ds.Tables[0].Rows[0][1].ToString().Trim();
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && (textEdit5.Text.Trim().Contains(s1) || textEdit5.Text.Trim().Contains(s2)))
                 {
                     checknum += 10000;
                     textcheck(5);
@@ -776,7 +778,8 @@ namespace 烽火条码检测
             {
                 string p1 = ds.Tables[0].Rows[0][2].ToString().Trim();
                 string p2 = ds.Tables[0].Rows[0][6].ToString().Trim();
-                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && (((textEdit10.Text.Trim().Contains(p1)) && (textEdit10.Text.Trim().Contains(p2))) || textEdit10.Text.Trim() == ds.Tables[0].Rows[0][5].ToString().Trim()))
+                string p3 = ds.Tables[0].Rows[0][1].ToString().Trim();
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0 && (((textEdit10.Text.Trim().Contains(p1)) && (textEdit10.Text.Trim().Contains(p2))) || textEdit10.Text.Trim() == ds.Tables[0].Rows[0][5].ToString().Trim() || textEdit10.Text.Trim().Contains(p3)))
                 {
                     checknum += 1000000000;
                     textcheck(10);
